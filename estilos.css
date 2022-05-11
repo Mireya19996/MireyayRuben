@@ -1,0 +1,164 @@
+:raíz
+{
+  tamaño de fuente: 1.6vw;
+  --fondo-color: rgb(240, 240, 235);
+  --titulo-color: rgb(22, 23, 20);
+  --blanco: #ffffff;
+  --boton-color: rgb(117, 47, 86);
+
+  --pagina-ancho: 50em;
+}
+
+cuerpo
+{
+  margen: 0;
+}
+
+h1, h2, h3, p
+{
+  margen: 0;
+}
+
+. cabecera
+{
+  color de fondo: var(--titulo-color);
+  color: var(--blanco);
+  pantalla: flex;
+  justificar-contenido: centro;
+}
+. cabecera__contenido
+{
+  ancho: var(--pagina-ancho);
+}
+
+principal
+{
+  color de fondo: var(--fondo-color);
+  pantalla: flex;
+  flex-direction: columna;
+  align-items: centro;
+}
+
+sección principal de > 
+{
+  ancho: var(--pagina-ancho);
+}
+
+. héroe
+{
+  text-align: centro;
+  margen superior: 1em;
+  margen-fondo: 1em;
+}
+
+. contenido-principal
+{
+  pantalla: flex;
+  justificar-contenido: espacio-entre;
+  tapa de relleno: .5em;
+  fondo de relleno: 2em;
+}
+. contenido-principal__imagen {
+  ancho: 20em;
+}
+. contenido-principal__izquierda {
+  ancho: 50%;
+}
+. contenido-principal__descripcion {
+  width: 100%;
+  margin-top: 1em;
+}
+.formulario-contenedor {
+  background-color: var(--blanco);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  height: min-content;
+}
+.formulario-contenedor__titulo {
+  font-size: 1.2rem;
+  margin-top: 1em;
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 17em;
+  padding: 1em;
+  box-sizing: border-box;
+}
+.formulario input {
+  border-width: 1px;
+  margin-bottom: 2em;
+  margin-top: .8em;
+  font-size: .7rem;
+  border-radius: 8px;
+  outline: none
+}
+.formulario button {
+  background-color: var(--boton-color);
+  color: white;
+  border: 0;
+  outline: none;
+  tamaño de fuente: .8rem;
+  altura: 2em;
+  radio de borde: 8px;
+  cursor: puntero;
+}
+
+. perfil
+{
+  color de fondo: var(--blanco);
+  ancho: 100%;
+  pantalla: flex;
+  justificar-contenido: centro;
+  acolchado-tapa: 2em;
+  fondo de relleno: 2em;
+}
+. perfil__contenido {
+  ancho: var(--pagina-ancho);
+  ancho: 15em;
+  pantalla: flex;
+  flex-direction: columna;
+  align-items: centro;
+}
+. perfil__imagen-contenedor {
+  pantalla: flex;
+  margen: 0;
+  desbordamiento: oculto;
+  radio de borde: 50%;
+  ancho: 5em;
+  margen-fondo: 1em;
+}
+. perfil__imagen-contenedor img {
+  ancho: 100%;
+  altura: automático;
+}
+. perfil__descripcion {
+  tamaño de fuente: .9rem;
+}
+
+@media pantalla y (ancho máximo: 425px) {
+  :raíz {
+    tamaño de fuente: 6vw;
+    --pagina-ancho: 90%;
+  }
+
+ . contenido-principal {
+    flex-direction: columna;
+  }
+ . contenido-principal__izquierda {
+    ancho: 100%;
+  }
+ . contenido-principal__imagen {
+    ancho: 100%;
+  }
+
+ . formulario-contenedor {
+    ancho: 100%;
+    margen superior: 1em;
+  }
+ . formulario {
+    ancho: 100%;
+  }
+}
